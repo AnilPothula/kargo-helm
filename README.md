@@ -73,10 +73,11 @@ This is a GitOps repository of a Kargo Helm example for getting started.
       kargo login --admin https://localhost:31444 --insecure-skip-tls-verify --password admin
       ```
 
-8. Apply the Kargo manifests:
+8. Apply the Kargo and ArgoCD manifests from this repo:
 
    ```shell
    kargo apply -f ./kargo
+   kubectl apply -f ./argocd
    ```
 
 9. Add the Git repository credentials to Kargo. This can also be done in the UI
